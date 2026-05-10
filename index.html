@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Khalid Musahaf Ali Asiri – AI & Urban Innovation</title>
+    <title>Khalid Mushif Ali Asiri – Data & AI Solutions Analyst</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -13,374 +13,617 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <style>
-      /* Color Themes */
+      /* ── Theme Variables ── */
       :root {
-        --primary: #000000;
-        --light-bg: #f0f2f5;
-        --light-text: #616d79;
-        --light-card: white;
-        --light-shadow: rgba(0, 0, 0, 0.05);
+        --accent: #2563eb;
+        --accent-light: #dbeafe;
+        --primary-bg: #f0f2f5;
+        --card-bg: #ffffff;
+        --text: #374151;
+        --text-muted: #6b7280;
+        --border: #e5e7eb;
+        --shadow: rgba(0, 0, 0, 0.06);
+        --header-from: #0f172a;
+        --header-to: #1e3a5f;
       }
       [data-theme="dark"] {
-        --primary: #151718;
-        --light-bg: #1a1a1a;
-        --light-text: #e9ecef;
-        --light-card: #2d3436;
-        --light-shadow: rgba(255, 255, 255, 0.05);
+        --accent: #3b82f6;
+        --accent-light: #1e3a5f;
+        --primary-bg: #111827;
+        --card-bg: #1f2937;
+        --text: #e5e7eb;
+        --text-muted: #9ca3af;
+        --border: #374151;
+        --shadow: rgba(0, 0, 0, 0.3);
+        --header-from: #0a0f1e;
+        --header-to: #0f2847;
       }
 
-      /* Global Styles */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+      /* ── Reset & Base ── */
+      * { margin: 0; padding: 0; box-sizing: border-box; }
       body {
         font-family: "Inter", sans-serif;
-        line-height: 1.6;
-        color: var(--light-text);
-        background: var(--light-bg);
-        transition: all 0.3s ease;
+        line-height: 1.7;
+        color: var(--text);
+        background: var(--primary-bg);
+        transition: background 0.3s ease, color 0.3s ease;
       }
+      ul { padding-left: 1.2rem; }
+      li { margin-bottom: 0.3rem; }
 
-      /* Container */
+      /* ── Layout ── */
       .container {
-        max-width: 1200px;
+        max-width: 1100px;
         margin: 0 auto;
-        padding: 2rem;
+        padding: 1.5rem 2rem;
       }
 
-      /* Header */
+      /* ── Header ── */
       header {
-        background: linear-gradient(135deg, var(--primary), #2c3e50);
+        background: linear-gradient(135deg, var(--header-from), var(--header-to));
         color: white;
-        padding: 4rem 2rem;
-        border-radius: 15px;
-        margin-bottom: 2rem;
+        padding: 3.5rem 2.5rem 2.5rem;
+        border-radius: 16px;
+        margin-bottom: 1.5rem;
         position: relative;
+        overflow: hidden;
+      }
+      header::before {
+        content: "";
+        position: absolute;
+        top: -50px; right: -50px;
+        width: 200px; height: 200px;
+        border-radius: 50%;
+        background: rgba(37, 99, 235, 0.15);
+      }
+      header h1 {
+        font-size: 2.4rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+      }
+      .header-title {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #93c5fd;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-top: 0.3rem;
+        margin-bottom: 0.8rem;
+      }
+      .header-summary {
+        font-size: 0.95rem;
+        color: #cbd5e1;
+        max-width: 700px;
+        line-height: 1.7;
       }
       .theme-toggle {
         position: absolute;
-        top: 1.5rem;
-        right: 2rem;
-        background: rgba(255, 255, 255, 0.2);
-        border: none;
+        top: 1.5rem; right: 2rem;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255,255,255,0.2);
         padding: 0.5rem 1rem;
-        border-radius: 5px;
+        border-radius: 8px;
         cursor: pointer;
-        transition: all 0.3s;
         color: white;
+        font-size: 0.9rem;
+        transition: background 0.3s;
       }
-      .theme-toggle:hover {
-        background: rgba(255, 255, 255, 0.3);
-      }
+      .theme-toggle:hover { background: rgba(255,255,255,0.25); }
 
       .contact-info {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
         display: flex;
-        gap: 1rem;
+        gap: 0.75rem;
         flex-wrap: wrap;
       }
-
       .contact-info a {
         color: white;
         text-decoration: none;
         display: flex;
         align-items: center;
-        gap: 0.5rem;
-        padding: 0.5rem 1rem;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 5px;
-        transition: all 0.3s;
+        gap: 0.4rem;
+        padding: 0.4rem 0.9rem;
+        background: rgba(255,255,255,0.12);
+        border: 1px solid rgba(255,255,255,0.15);
+        border-radius: 6px;
+        font-size: 0.88rem;
+        transition: background 0.3s;
       }
+      .contact-info a:hover { background: rgba(255,255,255,0.22); }
 
-      .contact-info a:hover {
-        background: rgba(255, 255, 255, 0.2);
-      }
-
-      /* Navigation */
+      /* ── Navigation ── */
       nav {
-        margin: 2rem 0;
         display: flex;
-        gap: 2rem;
+        gap: 0.3rem;
         flex-wrap: wrap;
+        margin-bottom: 2rem;
+        background: var(--card-bg);
+        padding: 0.75rem 1rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px var(--shadow);
       }
       nav a {
-        color: var(--light-text);
+        color: var(--text-muted);
         text-decoration: none;
         font-weight: 600;
-        padding: 0.5rem 1rem;
-        transition: all 0.3s;
+        font-size: 0.88rem;
+        padding: 0.45rem 0.9rem;
+        border-radius: 6px;
+        transition: all 0.25s;
       }
-      nav a:hover {
-        color: var(--primary);
-        background: var(--light-card);
-        border-radius: 5px;
+      nav a:hover, nav a.active {
+        color: var(--accent);
+        background: var(--accent-light);
       }
 
-      /* Sections */
-      section {
-        margin-bottom: 3rem;
-      }
+      /* ── Section Headers ── */
+      section { margin-bottom: 2.5rem; }
       section h2 {
-        color: var(--light-text);
-        border-bottom: 3px solid var(--primary);
-        padding-bottom: 0.5rem;
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: var(--text);
+        padding-bottom: 0.6rem;
         margin-bottom: 1.5rem;
+        border-bottom: 3px solid var(--accent);
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+      section h2 i { color: var(--accent); font-size: 1.1rem; }
+
+      /* ── Cards ── */
+      .card {
+        background: var(--card-bg);
+        border-radius: 12px;
+        box-shadow: 0 2px 10px var(--shadow);
+        border: 1px solid var(--border);
+        padding: 1.5rem;
+        margin-bottom: 1.25rem;
+        transition: transform 0.25s, box-shadow 0.25s;
+      }
+      .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px var(--shadow);
       }
 
-      /* Cards */
-      .project,
-      .skill-card,
-      .cert-item {
-        background: var(--light-card);
-        padding: 1.5rem;
-        border-radius: 10px;
-        box-shadow: 0 2px 10px var(--light-shadow);
-        transition: all 0.3s;
+      /* ── About ── */
+      #about .card p { font-size: 0.97rem; color: var(--text); }
+
+      /* ── Education ── */
+      .edu-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.25rem;
+      }
+      .edu-icon {
+        width: 50px; height: 50px;
+        background: var(--accent-light);
+        border-radius: 12px;
+        display: flex; align-items: center; justify-content: center;
+        flex-shrink: 0;
+        color: var(--accent);
+        font-size: 1.3rem;
+      }
+      .edu-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.2rem; }
+      .edu-card .degree { color: var(--text-muted); font-size: 0.9rem; }
+      .gpa-badge {
+        display: inline-block;
+        background: var(--accent);
+        color: white;
+        font-size: 0.78rem;
+        font-weight: 700;
+        padding: 0.2rem 0.65rem;
+        border-radius: 20px;
+        margin-top: 0.5rem;
+      }
+      .lang-badge {
+        display: inline-block;
+        background: var(--accent-light);
+        color: var(--accent);
+        font-size: 0.78rem;
+        font-weight: 600;
+        padding: 0.2rem 0.65rem;
+        border-radius: 20px;
+        margin-top: 0.5rem;
+        margin-left: 0.4rem;
+      }
+
+      /* ── Experience / Timeline ── */
+      .timeline { position: relative; padding-left: 2rem; }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 10px; top: 0; bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, var(--accent), var(--border));
+        border-radius: 2px;
+      }
+      .timeline-item {
+        position: relative;
         margin-bottom: 1.5rem;
+      }
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -1.65rem; top: 1.1rem;
+        width: 12px; height: 12px;
+        border-radius: 50%;
+        background: var(--accent);
+        border: 2px solid var(--card-bg);
+        box-shadow: 0 0 0 3px var(--accent-light);
+      }
+      .exp-card {
+        background: var(--card-bg);
+        border-radius: 12px;
+        box-shadow: 0 2px 10px var(--shadow);
+        border: 1px solid var(--border);
+        padding: 1.25rem 1.5rem;
+        transition: transform 0.25s, box-shadow 0.25s;
+      }
+      .exp-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px var(--shadow);
+      }
+      .exp-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 0.6rem;
+        flex-wrap: wrap;
+      }
+      .exp-title { font-size: 1rem; font-weight: 700; }
+      .exp-org { color: var(--accent); font-weight: 600; font-size: 0.9rem; }
+      .exp-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.25rem;
+      }
+      .exp-date {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        white-space: nowrap;
+      }
+      .exp-location {
+        font-size: 0.78rem;
+        color: var(--text-muted);
+      }
+      .exp-card ul { font-size: 0.9rem; color: var(--text); margin-top: 0.5rem; }
+
+      /* ── Skills ── */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.25rem;
+      }
+      .skill-card {
+        background: var(--card-bg);
+        border-radius: 12px;
+        box-shadow: 0 2px 10px var(--shadow);
+        border: 1px solid var(--border);
+        padding: 1.25rem 1.5rem;
+      }
+      .skill-card h3 {
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: var(--accent);
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+      .tag {
+        background: var(--accent-light);
+        color: var(--accent);
+        font-size: 0.78rem;
+        font-weight: 600;
+        padding: 0.25rem 0.6rem;
+        border-radius: 4px;
+      }
+      [data-theme="dark"] .tag { color: #93c5fd; }
+
+      /* ── Certifications ── */
+      .cert-item {
+        background: var(--card-bg);
+        border-radius: 12px;
+        box-shadow: 0 2px 10px var(--shadow);
+        border: 1px solid var(--border);
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 1rem;
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        transition: transform 0.25s, box-shadow 0.25s;
+      }
+      .cert-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px var(--shadow);
+      }
+      .cert-content { flex: 1; }
+      .cert-content h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .cert-content h4 i { color: var(--accent); }
+      .cert-content p { font-size: 0.88rem; color: var(--text-muted); }
+      .cert-year {
+        display: inline-block;
+        background: var(--accent-light);
+        color: var(--accent);
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 0.15rem 0.5rem;
+        border-radius: 4px;
+        margin-top: 0.4rem;
+      }
+      .cert-image-container { flex-shrink: 0; }
+      .cert-image {
+        width: 180px; height: 120px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px var(--shadow);
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: 2px solid transparent;
+      }
+      .cert-image:hover {
+        transform: scale(1.05);
+        border-color: var(--accent);
+        box-shadow: 0 8px 24px var(--shadow);
+      }
+      .cert-placeholder {
+        width: 180px; height: 120px;
+        border-radius: 8px;
+        background: var(--accent-light);
+        border: 2px dashed var(--accent);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem;
+        cursor: default;
+        flex-shrink: 0;
+      }
+      .cert-placeholder i { color: var(--accent); font-size: 1.6rem; opacity: 0.6; }
+      .cert-placeholder span {
+        font-size: 0.72rem;
+        color: var(--accent);
+        text-align: center;
+        padding: 0 0.5rem;
+        opacity: 0.8;
+        font-weight: 600;
+      }
+
+      /* ── Projects ── */
+      .project {
+        background: var(--card-bg);
+        border-radius: 12px;
+        box-shadow: 0 2px 10px var(--shadow);
+        border: 1px solid var(--border);
+        padding: 1.5rem;
+        margin-bottom: 1.25rem;
+        display: flex;
+        gap: 1.75rem;
+        align-items: flex-start;
+        transition: transform 0.25s, box-shadow 0.25s;
       }
       .project:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 5px 15px var(--light-shadow);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px var(--shadow);
       }
-
-      /* Enhanced Project Cards with Images */
-      .project {
-        position: relative;
-        display: flex;
-        gap: 2rem;
-        align-items: flex-start;
+      .project-content { flex: 1; }
+      .project-content h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.3rem; }
+      .project-content em { color: var(--text-muted); font-size: 0.88rem; }
+      .project-content ul { font-size: 0.9rem; margin-top: 0.6rem; }
+      .project-badge {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        padding: 0.2rem 0.55rem;
+        border-radius: 4px;
+        margin-bottom: 0.5rem;
+        margin-right: 0.3rem;
       }
-
-      .project-content {
-        flex: 1;
-      }
-
-      .project-image-container {
-        flex-shrink: 0;
-        position: relative;
-      }
-
+      .badge-blue { background: #dbeafe; color: #1d4ed8; }
+      .badge-green { background: #dcfce7; color: #16a34a; }
+      .badge-purple { background: #ede9fe; color: #7c3aed; }
+      [data-theme="dark"] .badge-blue { background: #1e3a5f; color: #93c5fd; }
+      [data-theme="dark"] .badge-green { background: #14532d; color: #86efac; }
+      [data-theme="dark"] .badge-purple { background: #2e1065; color: #c4b5fd; }
+      .project-image-container { flex-shrink: 0; }
       .project-image {
-        width: 200px;
-        height: 150px;
+        width: 200px; height: 145px;
         object-fit: cover;
         border-radius: 10px;
-        box-shadow: 0 4px 15px var(--light-shadow);
+        box-shadow: 0 4px 15px var(--shadow);
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: transform 0.3s, border-color 0.3s;
         border: 2px solid transparent;
       }
-
       .project-image:hover {
         transform: scale(1.05);
-        box-shadow: 0 8px 25px var(--light-shadow);
-        border-color: var(--primary);
+        border-color: var(--accent);
       }
+      .project-placeholder {
+        width: 200px; height: 145px;
+        border-radius: 10px;
+        background: var(--accent-light);
+        border: 2px dashed var(--accent);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        flex-shrink: 0;
+      }
+      .project-placeholder i { color: var(--accent); font-size: 2rem; opacity: 0.5; }
+      .project-placeholder span { font-size: 0.72rem; color: var(--accent); opacity: 0.8; font-weight: 600; }
 
-      /* CV specific styling */
+      /* ── CV Section ── */
       .cv-image {
-        width: 200px;
-        height: 280px;
+        width: 200px; height: 280px;
         object-fit: contain;
         background: white;
-        padding: 10px;
+        padding: 8px;
         border-radius: 10px;
-        box-shadow: 0 4px 15px var(--light-shadow);
+        box-shadow: 0 4px 15px var(--shadow);
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: transform 0.3s, border-color 0.3s;
         border: 2px solid transparent;
+        flex-shrink: 0;
       }
-
       .cv-image:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 25px var(--light-shadow);
-        border-color: var(--primary);
+        transform: scale(1.04);
+        border-color: var(--accent);
       }
 
-      /* Image Modal */
+      /* ── Contact ── */
+      #contact .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+      #contact .contact-info a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.6rem 1.1rem;
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        color: var(--text);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: all 0.25s;
+        box-shadow: 0 2px 8px var(--shadow);
+      }
+      #contact .contact-info a:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        transform: translateY(-2px);
+      }
+      #contact .contact-info a i { color: var(--accent); }
+      .contact-location {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.6rem 1.1rem;
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--text);
+        box-shadow: 0 2px 8px var(--shadow);
+      }
+      .contact-location i { color: var(--accent); }
+
+      /* ── Modal ── */
       .modal {
         display: none;
         position: fixed;
         z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        background-color: rgba(0,0,0,0.92);
         animation: fadeIn 0.3s;
+        align-items: center;
+        justify-content: center;
       }
-
+      .modal.open { display: flex; }
       .modal-content {
-        margin: auto;
-        display: block;
-        width: 80%;
-        max-width: 700px;
-        max-height: 80%;
+        max-width: 85%;
+        max-height: 85vh;
         border-radius: 10px;
         animation: zoomIn 0.3s;
+        object-fit: contain;
       }
-
       .close {
         position: absolute;
-        top: 15px;
-        right: 35px;
+        top: 18px; right: 30px;
         color: #f1f1f1;
-        font-size: 40px;
-        font-weight: bold;
+        font-size: 36px;
         cursor: pointer;
-        transition: 0.3s;
+        transition: color 0.3s;
+        line-height: 1;
       }
+      .close:hover { color: var(--accent); }
+      @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+      @keyframes zoomIn { from { transform: scale(0.7); } to { transform: scale(1); } }
 
-      .close:hover {
-        color: #bbb;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      @keyframes zoomIn {
-        from {
-          transform: scale(0);
-        }
-        to {
-          transform: scale(1);
-        }
-      }
-
-      /* Certificate cards with images */
-      .cert-item {
-        position: relative;
-        display: flex;
-        gap: 2rem;
-        align-items: flex-start;
-        padding: 1.5rem;
-      }
-
-      .cert-content {
-        flex: 1;
-      }
-
-      .cert-image-container {
-        flex-shrink: 0;
-        position: relative;
-      }
-
-      .cert-image {
-        width: 200px;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 10px;
-        box-shadow: 0 4px 15px var(--light-shadow);
-        cursor: pointer;
-        transition: all 0.3s ease;
-        border: 2px solid transparent;
-      }
-
-      .cert-image:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 25px var(--light-shadow);
-        border-color: var(--primary);
-      }
-
-      /* Skills Grid */
-      .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-      }
-
-      /* Footer */
+      /* ── Footer ── */
       footer {
         text-align: center;
         padding: 2rem 0;
-        border-top: 1px solid var(--light-shadow);
-        margin-top: 3rem;
-        color: var(--light-text);
+        border-top: 1px solid var(--border);
+        margin-top: 2rem;
+        color: var(--text-muted);
+        font-size: 0.88rem;
       }
 
-      /* Responsive */
+      /* ── Responsive ── */
       @media (max-width: 768px) {
-        header h1 {
-          font-size: 2rem;
-        }
-        nav {
-          justify-content: center;
-        }
-
-        .project {
+        header { padding: 2.5rem 1.5rem 2rem; }
+        header h1 { font-size: 1.8rem; }
+        nav { gap: 0.2rem; }
+        .project, .cert-item {
           flex-direction: column;
-          text-align: center;
         }
-
-        .project-image,
-        .cv-image {
+        .project-image, .cert-image, .cert-placeholder, .project-placeholder {
           width: 100%;
-          max-width: 300px;
-          height: 200px;
+          max-width: 320px;
+          height: 180px;
         }
-
-        .cv-image {
-          height: 280px;
-        }
-
-        .modal-content {
-          width: 95%;
-          margin: 5% auto;
-        }
-
-        .contact-info {
-          justify-content: center;
-        }
-
-        .cert-item {
-          flex-direction: column;
-          text-align: center;
-        }
+        .cv-image { width: 100%; max-width: 280px; height: 350px; }
+        .exp-meta { align-items: flex-start; }
+        .modal-content { max-width: 95%; }
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <!-- Header -->
+
+      <!-- ── Header ── -->
       <header>
         <button class="theme-toggle" onclick="toggleTheme()">
           <i class="fas fa-moon"></i>
-          <i class="fas fa-sun" style="display: none"></i>
+          <i class="fas fa-sun" style="display:none"></i>
         </button>
-        <h1>Khalid Musahaf Ali Asiri</h1>
-        <p>
-          Aspiring Computer Science Professional | Artificial Intelligence &
-          Urban Innovation Enthusiast
+        <h1>Khalid Mushif Ali Asiri</h1>
+        <p class="header-title">Data &amp; AI Solutions Analyst</p>
+        <p class="header-summary">
+          Pragmatic AI &amp; Data Solutions Specialist combining expertise in IT infrastructure,
+          full-stack integration, and intelligent systems. Specialized in architecting robust
+          data pipelines and deploying predictive models to drive strategic decision-making.
         </p>
         <div class="contact-info">
-          <a
-            href="https://www.linkedin.com/in/%D8%AE%D8%A7%D9%84%D8%AF-%D8%B9%D8%B3%D9%8A%D8%B1%D9%8A-7a1599334/"
-            ><i class="fab fa-linkedin"></i> LinkedIn</a
-          >
-          <a href="https://github.com/khalidasi1"
-            ><i class="fab fa-github"></i> GitHub</a
-          >
-          <a href="mailto:khalidmma110@gmail.com"
-            ><i class="fas fa-envelope"></i> Email</a
-          >
-          <a href="tel:+966531906383"
-            ><i class="fas fa-phone"></i> +966 531906383</a
-          >
+          <a href="https://www.linkedin.com/in/%D8%AE%D8%A7%D9%84%D8%AF-%D8%B9%D8%B3%D9%8A%D8%B1%D9%8A-7a1599334/" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/khalidasi1" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="mailto:khalidmma110@gmail.com">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+          <a href="tel:+966531906383">
+            <i class="fas fa-phone"></i> +966 531906383
+          </a>
         </div>
       </header>
 
-      <!-- Navigation -->
+      <!-- ── Navigation ── -->
       <nav>
         <a href="#about">About</a>
         <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#certifications">Certifications</a>
         <a href="#projects">Projects</a>
@@ -388,166 +631,332 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <!-- About -->
+      <!-- ── About ── -->
       <section id="about">
-        <h2>About Me</h2>
-        <p>
-          AI-track Computer Science graduate with a strong foundation in
-          cybersecurity, statistics, and data analytics. Skilled in Python and
-          Excel for analyzing security-related data, building dashboards, and
-          generating reports to support decision making. Completed IBM
-          Cybersecurity Fundamentals and multiple Huawei certifications, with
-          knowledge of networks, cloud, and basic security controls. Interested
-          in applying data-driven methods to monitor threats, measure security
-          KPIs, and support cybersecurity teams.
-        </p>
+        <h2><i class="fas fa-user"></i> About Me</h2>
+        <div class="card">
+          <p>
+            Pragmatic AI &amp; Data Solutions Specialist combining expertise in IT infrastructure,
+            full-stack integration, and intelligent systems. Specialized in architecting robust
+            data pipelines and deploying predictive models to drive strategic decision-making.
+            Integrates AI architecture with internal auditing and data governance to deliver
+            automated, secure solutions compliant with strict national regulatory frameworks.
+          </p>
+        </div>
       </section>
 
-      <!-- Education -->
+      <!-- ── Education ── -->
       <section id="education">
-        <h2>Education</h2>
-        <div class="project">
-          <div class="project-content">
-            <h3>King Khalid University</h3>
-            <p>
-              Bachelor of Science in Computer Science (Artificial Intelligence
-              Track)
-            </p>
-            <p>GPA: 4.78/5 | Expected Graduation: 2025</p>
-            <ul>
-              <li>
-                Academic Excellence: Top-tier performance in AI, cloud
-                computing, and cybersecurity coursework
-              </li>
-            </ul>
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+        <div class="card">
+          <div class="edu-card">
+            <div class="edu-icon"><i class="fas fa-university"></i></div>
+            <div>
+              <h3>King Khalid University</h3>
+              <p class="degree">Bachelor of Science in Computer Science – AI Track</p>
+              <p class="degree">Graduated: August 2025</p>
+              <div>
+                <span class="gpa-badge">GPA: 4.78 / 5</span>
+                <span class="lang-badge">Arabic – Native</span>
+                <span class="lang-badge">English – Fluent</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Skills -->
+      <!-- ── Experience ── -->
+      <section id="experience">
+        <h2><i class="fas fa-briefcase"></i> Experience</h2>
+        <div class="timeline">
+
+          <!-- SFDA -->
+          <div class="timeline-item">
+            <div class="exp-card">
+              <div class="exp-header">
+                <div>
+                  <div class="exp-title">Data Analyst</div>
+                  <div class="exp-org">Saudi Food and Drug Authority (SFDA)</div>
+                </div>
+                <div class="exp-meta">
+                  <span class="exp-date"><i class="fas fa-calendar-alt"></i> Dec 2025 – Present</span>
+                  <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Riyadh</span>
+                </div>
+              </div>
+              <ul>
+                <li>Engineered high-throughput data pipelines and deployed predictive AI models to process massive-scale food and pharmaceutical databases, forecasting critical variables to optimize high-stakes regulatory analysis.</li>
+                <li>Architected an automated decision-support platform that standardized core research workflows, achieving a <strong>65% reduction in study turnaround time</strong> and enhancing computational accuracy by 15%.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- FlxCode -->
+          <div class="timeline-item">
+            <div class="exp-card">
+              <div class="exp-header">
+                <div>
+                  <div class="exp-title">Full-Stack Web Developer</div>
+                  <div class="exp-org">FlxCode</div>
+                </div>
+                <div class="exp-meta">
+                  <span class="exp-date"><i class="fas fa-calendar-alt"></i> Aug 2025 – Nov 2025</span>
+                  <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Abha</span>
+                </div>
+              </div>
+              <ul>
+                <li>Developed and integrated full-stack features using React.js and REST APIs for the Aseer Development Authority platform, streamlining digital service delivery.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Saudi Electricity Company -->
+          <div class="timeline-item">
+            <div class="exp-card">
+              <div class="exp-header">
+                <div>
+                  <div class="exp-title">Summer Training – IT Department</div>
+                  <div class="exp-org">Saudi Electricity Company</div>
+                </div>
+                <div class="exp-meta">
+                  <span class="exp-date"><i class="fas fa-calendar-alt"></i> Jun 2025 – Aug 2025</span>
+                  <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Abha</span>
+                </div>
+              </div>
+              <ul>
+                <li>Facilitated digital transformation and IT operations by upgrading internal systems with React.js and applying ITIL standards to ensure structural reliability and service excellence.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── Skills ── -->
       <section id="skills">
-        <h2>Technical Skills</h2>
+        <h2><i class="fas fa-code"></i> Technical Skills</h2>
         <div class="skills-grid">
           <div class="skill-card">
-            <h3>AI & Machine Learning</h3>
-            <p>Predictive modeling, neural networks, NLP, TensorFlow/PyTorch</p>
+            <h3><i class="fas fa-robot"></i> AI &amp; Engineering</h3>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Java</span>
+              <span class="tag">Go</span>
+              <span class="tag">C/C++</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">PyTorch</span>
+              <span class="tag">Computer Vision</span>
+              <span class="tag">Neural Networks</span>
+              <span class="tag">Autonomous Agents</span>
+            </div>
           </div>
           <div class="skill-card">
-            <h3>Cloud & Data</h3>
-            <p>
-              AWS, Huawei Cloud, data analysis (Python, SQL), big data pipelines
-            </p>
+            <h3><i class="fas fa-cloud"></i> Data &amp; Cloud</h3>
+            <div class="tags">
+              <span class="tag">Data Pipelines</span>
+              <span class="tag">API Integration</span>
+              <span class="tag">AWS</span>
+              <span class="tag">Huawei Cloud</span>
+              <span class="tag">React.js</span>
+              <span class="tag">Full-Stack Dev</span>
+              <span class="tag">REST APIs</span>
+            </div>
           </div>
           <div class="skill-card">
-            <h3>Cybersecurity</h3>
-            <p>Network security, ethical hacking, risk assessment</p>
+            <h3><i class="fas fa-chart-line"></i> Strategic &amp; Operational</h3>
+            <div class="tags">
+              <span class="tag">Strategic Analysis</span>
+              <span class="tag">Decision Support</span>
+              <span class="tag">Digital Transformation</span>
+              <span class="tag">ITIL Frameworks</span>
+              <span class="tag">Internal Auditing</span>
+              <span class="tag">Project Management</span>
+            </div>
           </div>
           <div class="skill-card">
-            <h3>Languages</h3>
-            <p>Bilingual: Arabic (Native), English (Fluent)</p>
+            <h3><i class="fas fa-language"></i> Languages</h3>
+            <div class="tags">
+              <span class="tag">Arabic – Native</span>
+              <span class="tag">English – Fluent</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Certifications -->
+      <!-- ── Certifications ── -->
       <section id="certifications">
-        <h2>Certifications</h2>
-        <div class="certifications">
-          <div class="cert-item">
-            <div class="cert-content">
-              <h4><i class="fas fa-certificate"></i> HCIA-Datacom V1.0</h4>
-              <p>Huawei Talent Online | 2024</p>
-            </div>
-            <div class="cert-image-container">
-              <img
-                src="images/img/WhatsApp Image 2025-05-26 at 12.32.19_29c48303.jpg"
-                alt="HCIA-Datacom Certificate"
-                class="cert-image"
-                onclick="openModal(this)"
-              />
-            </div>
+        <h2><i class="fas fa-award"></i> Certifications</h2>
+
+        <!-- KAUST -->
+        <div class="cert-item">
+          <div class="cert-content">
+            <h4><i class="fas fa-certificate"></i> Advanced Artificial Intelligence &amp; Machine Learning</h4>
+            <p>King Abdullah University of Science and Technology (KAUST)</p>
+            <span class="cert-year">2025</span>
           </div>
-          <div class="cert-item">
-            <div class="cert-content">
-              <h4>
-                <i class="fas fa-certificate"></i> HCIA-Cloud Computing V5.0
-              </h4>
-              <p>Huawei Talent Online | 2024</p>
-            </div>
-            <div class="cert-image-container">
-              <img
-                src="images/img/WhatsApp Image 2025-05-26 at 12.32.19_2164a5a3.jpg"
-                alt="HCIA-Cloud Computing Certificate"
-                class="cert-image"
-                onclick="openModal(this)"
-              />
-            </div>
-          </div>
-          <div class="cert-item">
-            <div class="cert-content">
-              <h4><i class="fas fa-certificate"></i> HCIA-AI V3.5</h4>
-              <p>Huawei Talent Online | 2024</p>
-            </div>
-            <div class="cert-image-container">
-              <img
-                src="images/img/WhatsApp Image 2025-05-26 at 12.32.19_125cb33c.jpg    "
-                alt="HCIA-AI Certificate"
-                class="cert-image"
-                onclick="openModal(this)"
-              />
-            </div>
-          </div>
-          <div class="cert-item">
-            <div class="cert-content">
-              <h4>
-                <i class="fas fa-certificate"></i> Cybersecurity Fundamentals
-              </h4>
-              <p>IBM SkillsBuild | 2024</p>
-            </div>
-            <div class="cert-image-container">
-              <img
-                src="images/img/WhatsApp Image 2025-05-26 at 12.32.08_bc631c75.jpg"
-                alt="Cybersecurity Fundamentals Certificate"
-                class="cert-image"
-                onclick="openModal(this)"
-              />
-            </div>
-          </div>
-          <div class="cert-item">
-            <div class="cert-content">
-              <h4>
-                <i class="fas fa-certificate"></i> Internal Audit Practitioner
-              </h4>
-              <p>Morgan International | 2024</p>
-            </div>
-            <div class="cert-image-container">
-              <img
-                src="images/img/WhatsApp Image 2025-05-26 at 12.32.19_64e41b81.jpg"
-                alt="Internal Audit Practitioner Certificate"
-                class="cert-image"
-                onclick="openModal(this)"
-              />
-            </div>
+          <div class="cert-image-container">
+            <img
+              src="images/img/cert-kaust-ai.jpg"
+              alt="KAUST Advanced AI & ML Certificate"
+              class="cert-image"
+              onclick="openModal(this)"
+            />
           </div>
         </div>
+
+        <!-- NUS -->
+        <div class="cert-item">
+          <div class="cert-content">
+            <h4><i class="fas fa-certificate"></i> Advanced AI Program</h4>
+            <p>National University of Singapore (NUS)</p>
+            <span class="cert-year">2025</span>
+          </div>
+          <div class="cert-image-container">
+            <img
+              src="images/img/cert-nus-ai.jpg"
+              alt="NUS Advanced AI Program Certificate"
+              class="cert-image"
+              onclick="openModal(this)"
+            />
+          </div>
+        </div>
+
+        <!-- Cisco IoT -->
+        <div class="cert-item">
+          <div class="cert-content">
+            <h4><i class="fas fa-certificate"></i> Internet of Things (IoT)</h4>
+            <p>Cisco Networking Academy</p>
+            <span class="cert-year">2025</span>
+          </div>
+          <div class="cert-image-container">
+            <img
+              src="images/img/cert-cisco-iot.jpg"
+              alt="Cisco IoT Certificate"
+              class="cert-image"
+              onclick="openModal(this)"
+            />
+          </div>
+        </div>
+
+        <!-- Robonation -->
+        <div class="cert-item">
+          <div class="cert-content">
+            <h4><i class="fas fa-certificate"></i> Robonation Program</h4>
+            <p>Saudi Federation for Robotics &amp; RC Sports</p>
+            <span class="cert-year">2025</span>
+          </div>
+          <div class="cert-image-container">
+            <img
+              src="images/img/cert-robonation.jpg"
+              alt="Robonation Program Certificate"
+              class="cert-image"
+              onclick="openModal(this)"
+            />
+          </div>
+        </div>
+
+        <!-- HCIA-Datacom -->
+        <div class="cert-item">
+          <div class="cert-content">
+            <h4><i class="fas fa-certificate"></i> HCIA-Datacom V1.0</h4>
+            <p>Huawei Technologies</p>
+            <span class="cert-year">2024</span>
+          </div>
+          <div class="cert-image-container">
+            <img
+              src="images/img/WhatsApp Image 2025-05-26 at 12.32.19_29c48303.jpg"
+              alt="HCIA-Datacom Certificate"
+              class="cert-image"
+              onclick="openModal(this)"
+            />
+          </div>
+        </div>
+
+        <!-- HCIA-Cloud -->
+        <div class="cert-item">
+          <div class="cert-content">
+            <h4><i class="fas fa-certificate"></i> HCIA-Cloud Computing V5.0</h4>
+            <p>Huawei Technologies</p>
+            <span class="cert-year">2024</span>
+          </div>
+          <div class="cert-image-container">
+            <img
+              src="images/img/WhatsApp Image 2025-05-26 at 12.32.19_2164a5a3.jpg"
+              alt="HCIA-Cloud Computing Certificate"
+              class="cert-image"
+              onclick="openModal(this)"
+            />
+          </div>
+        </div>
+
+        <!-- HCIA-AI -->
+        <div class="cert-item">
+          <div class="cert-content">
+            <h4><i class="fas fa-certificate"></i> HCIA-AI V3.5</h4>
+            <p>Huawei Technologies</p>
+            <span class="cert-year">2024</span>
+          </div>
+          <div class="cert-image-container">
+            <img
+              src="images/img/WhatsApp Image 2025-05-26 at 12.32.19_125cb33c.jpg"
+              alt="HCIA-AI Certificate"
+              class="cert-image"
+              onclick="openModal(this)"
+            />
+          </div>
+        </div>
+
+        <!-- IBM Cybersecurity -->
+        <div class="cert-item">
+          <div class="cert-content">
+            <h4><i class="fas fa-certificate"></i> Cybersecurity Fundamentals</h4>
+            <p>IBM SkillsBuild</p>
+            <span class="cert-year">2024</span>
+          </div>
+          <div class="cert-image-container">
+            <img
+              src="images/img/WhatsApp Image 2025-05-26 at 12.32.08_bc631c75.jpg"
+              alt="Cybersecurity Fundamentals Certificate"
+              class="cert-image"
+              onclick="openModal(this)"
+            />
+          </div>
+        </div>
+
+        <!-- Internal Audit -->
+        <div class="cert-item">
+          <div class="cert-content">
+            <h4><i class="fas fa-certificate"></i> Internal Audit Practitioner (IAP)</h4>
+            <p>Morgan International</p>
+            <span class="cert-year">2024</span>
+          </div>
+          <div class="cert-image-container">
+            <img
+              src="images/img/WhatsApp Image 2025-05-26 at 12.32.19_64e41b81.jpg"
+              alt="Internal Audit Practitioner Certificate"
+              class="cert-image"
+              onclick="openModal(this)"
+            />
+          </div>
+        </div>
+
       </section>
 
-      <!-- Projects -->
+      <!-- ── Projects ── -->
       <section id="projects">
-        <h2>Key Projects</h2>
+        <h2><i class="fas fa-laptop-code"></i> Projects</h2>
+
+        <!-- Urban Service Distribution -->
         <div class="project">
           <div class="project-content">
+            <div>
+              <span class="project-badge badge-blue">Final Year Project</span>
+              <span class="project-badge badge-green">Vision 2030</span>
+            </div>
             <h3>AI-Powered Urban Service Distribution System</h3>
-            <p><em>Vision 2030 Aligned | Python, TensorFlow, GIS Tools</em></p>
+            <p><em>Python · TensorFlow · GIS Tools — 2025</em></p>
             <ul>
-              <li>
-                Developed predictive models to optimize service allocation in
-                urban areas
-              </li>
-              <li>
-                Improved resource distribution efficiency by 30% through
-                population density analysis
-              </li>
+              <li>Developed a predictive AI solution to optimize resource distribution across urban areas.</li>
+              <li>Research study demonstrated a <strong>23% reduction in financial waste</strong> and alignment with Vision 2030 goals.</li>
             </ul>
           </div>
           <div class="project-image-container">
@@ -559,15 +968,40 @@
             />
           </div>
         </div>
+
+        <!-- Factory Worker Safety -->
         <div class="project">
           <div class="project-content">
-            <h3>Smart City Cybersecurity Framework</h3>
-            <p><em>Cloud Computing & AI Integration</em></p>
+            <div>
+              <span class="project-badge badge-purple">University Project</span>
+            </div>
+            <h3>AI-Based Factory Worker Safety Detection</h3>
+            <p><em>Python · CNN · Computer Vision — 2024</em></p>
             <ul>
-              <li>
-                Designed cloud-based threat detection system using AI-driven
-                anomaly recognition
-              </li>
+              <li>Architected a real-time CNN-based system achieving <strong>95%+ accuracy</strong> in PPE (Personal Protective Equipment) detection.</li>
+              <li>Automated industrial safety compliance and access control to reduce workplace hazards.</li>
+            </ul>
+          </div>
+          <div class="project-image-container">
+            <img
+              src="images/img/project-factory-safety.jpg"
+              alt="AI-Based Factory Worker Safety Detection"
+              class="project-image"
+              onclick="openModal(this)"
+            />
+          </div>
+        </div>
+
+        <!-- Smart City Cybersecurity -->
+        <div class="project">
+          <div class="project-content">
+            <div>
+              <span class="project-badge badge-blue">University Project</span>
+            </div>
+            <h3>Smart City Cybersecurity Framework</h3>
+            <p><em>Cloud Computing · AI Integration</em></p>
+            <ul>
+              <li>Designed a cloud-based threat detection system using AI-driven anomaly recognition.</li>
             </ul>
           </div>
           <div class="project-image-container">
@@ -579,31 +1013,30 @@
             />
           </div>
         </div>
+
       </section>
 
-      <!-- CV -->
+      <!-- ── CV ── -->
       <section id="cv">
-        <h2>Curriculum Vitae</h2>
+        <h2><i class="fas fa-file-alt"></i> Curriculum Vitae</h2>
         <div class="project">
           <div class="project-content">
             <h3>Professional CV</h3>
             <p><em>Complete academic and professional background</em></p>
             <ul>
-              <li>
-                Comprehensive overview of education, certifications, and
-                technical skills
-              </li>
+              <li>Comprehensive overview of education, certifications, and technical skills</li>
+              <li>Full work experience at SFDA, FlxCode, and Saudi Electricity Company</li>
               <li>Detailed project descriptions and achievements</li>
-              <li>Professional contact information and portfolio links</li>
-              <li>GPA: 4.78/5 from King Khalid University</li>
+              <li>GPA: 4.78/5 – King Khalid University</li>
             </ul>
-            <p><strong>Click on the CV image to view in full size</strong></p>
+            <p style="margin-top:0.75rem; font-size:0.85rem; color:var(--text-muted);">
+              <i class="fas fa-search-plus"></i> Click the CV image to view full size
+            </p>
           </div>
           <div class="project-image-container">
-            <!-- Replace this src with your actual CV image path -->
             <img
               src="images/img/cv.jpg"
-              alt="Khalid Musahaf Ali Asiri - Professional CV"
+              alt="Khalid Mushif Ali Asiri – Professional CV"
               class="cv-image"
               onclick="openModal(this)"
             />
@@ -611,84 +1044,82 @@
         </div>
       </section>
 
-      <!-- Contact -->
+      <!-- ── Contact ── -->
       <section id="contact">
-        <h2>Contact</h2>
+        <h2><i class="fas fa-paper-plane"></i> Contact</h2>
         <div class="contact-info">
-          <a href="mailto:khalidmma110@gmail.com"
-            ><i class="fas fa-envelope"></i> khalidmma110@gmail.com</a
-          >
-          <a href="tel:+966531906383"
-            ><i class="fas fa-phone"></i> +966 531906383</a
-          >
-          <p><i class="fas fa-map-marker-alt"></i> Saudi Arabia</p>
+          <a href="mailto:khalidmma110@gmail.com">
+            <i class="fas fa-envelope"></i> khalidmma110@gmail.com
+          </a>
+          <a href="tel:+966531906383">
+            <i class="fas fa-phone"></i> +966 531906383
+          </a>
+          <a href="https://www.linkedin.com/in/%D8%AE%D8%A7%D9%84%D8%AF-%D8%B9%D8%B3%D9%8A%D8%B1%D9%8A-7a1599334/" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/khalidasi1" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <div class="contact-location">
+            <i class="fas fa-map-marker-alt"></i> Riyadh, Saudi Arabia
+          </div>
         </div>
       </section>
 
       <footer>
-        <p>© 2025 Khalid Musahaf Ali Asiri. All rights reserved.</p>
+        <p>© 2025 Khalid Mushif Ali Asiri · Data &amp; AI Solutions Analyst</p>
       </footer>
     </div>
 
-    <!-- Image Modal -->
+    <!-- ── Image Modal ── -->
     <div id="imageModal" class="modal" onclick="closeModal()">
-      <span class="close">&times;</span>
+      <span class="close" onclick="closeModal()">&times;</span>
       <img class="modal-content" id="modalImage" />
     </div>
 
     <script>
       function toggleTheme() {
         const body = document.body;
-        const moonIcon = document.querySelector(".fa-moon");
-        const sunIcon = document.querySelector(".fa-sun");
+        const moon = document.querySelector(".fa-moon");
+        const sun  = document.querySelector(".fa-sun");
         if (body.getAttribute("data-theme") === "dark") {
           body.removeAttribute("data-theme");
-          moonIcon.style.display = "inline-block";
-          sunIcon.style.display = "none";
+          moon.style.display = "inline-block";
+          sun.style.display  = "none";
         } else {
           body.setAttribute("data-theme", "dark");
-          moonIcon.style.display = "none";
-          sunIcon.style.display = "inline-block";
+          moon.style.display = "none";
+          sun.style.display  = "inline-block";
         }
       }
 
       function openModal(img) {
-        const modal = document.getElementById("imageModal");
+        const modal    = document.getElementById("imageModal");
         const modalImg = document.getElementById("modalImage");
-        modal.style.display = "block";
+        modal.classList.add("open");
         modalImg.src = img.src;
         modalImg.alt = img.alt;
       }
 
       function closeModal() {
-        document.getElementById("imageModal").style.display = "none";
+        document.getElementById("imageModal").classList.remove("open");
       }
 
-      // Close modal with Escape key
-      document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
-          closeModal();
-        }
+      document.addEventListener("keydown", e => {
+        if (e.key === "Escape") closeModal();
       });
 
-      // Auto-detect dark mode preference
       if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
         document.body.setAttribute("data-theme", "dark");
         document.querySelector(".fa-moon").style.display = "none";
-        document.querySelector(".fa-sun").style.display = "inline-block";
+        document.querySelector(".fa-sun").style.display  = "inline-block";
       }
 
-      // Smooth scrolling for navigation links
-      document.querySelectorAll('nav a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
+      document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
           e.preventDefault();
           const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
+          if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
         });
       });
     </script>

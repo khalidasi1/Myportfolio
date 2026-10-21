@@ -1,9 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Khalid Mushif Ali Asiri – Artificial Intelligence • Digital Transformation • Data Analytics</title>
+    <title>
+      Khalid Mushif Ali Asiri – Artificial Intelligence • Digital Transformation
+      • Data Analytics
+    </title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -40,16 +43,26 @@
       }
 
       /* ── Reset & Base ── */
-      * { margin: 0; padding: 0; box-sizing: border-box; }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
       body {
         font-family: "Inter", sans-serif;
         line-height: 1.7;
         color: var(--text);
         background: var(--primary-bg);
-        transition: background 0.3s ease, color 0.3s ease;
+        transition:
+          background 0.3s ease,
+          color 0.3s ease;
       }
-      ul { padding-left: 1.2rem; }
-      li { margin-bottom: 0.3rem; }
+      ul {
+        padding-left: 1.2rem;
+      }
+      li {
+        margin-bottom: 0.3rem;
+      }
 
       /* ── Layout ── */
       .container {
@@ -60,7 +73,11 @@
 
       /* ── Header ── */
       header {
-        background: linear-gradient(135deg, var(--header-from), var(--header-to));
+        background: linear-gradient(
+          135deg,
+          var(--header-from),
+          var(--header-to)
+        );
         color: white;
         padding: 3.5rem 2.5rem 2.5rem;
         border-radius: 16px;
@@ -71,8 +88,10 @@
       header::before {
         content: "";
         position: absolute;
-        top: -50px; right: -50px;
-        width: 200px; height: 200px;
+        top: -50px;
+        right: -50px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
         background: rgba(37, 99, 235, 0.15);
       }
@@ -98,9 +117,10 @@
       }
       .theme-toggle {
         position: absolute;
-        top: 1.5rem; right: 2rem;
+        top: 1.5rem;
+        right: 2rem;
         background: rgba(255, 255, 255, 0.15);
-        border: 1px solid rgba(255,255,255,0.2);
+        border: 1px solid rgba(255, 255, 255, 0.2);
         padding: 0.5rem 1rem;
         border-radius: 8px;
         cursor: pointer;
@@ -108,7 +128,9 @@
         font-size: 0.9rem;
         transition: background 0.3s;
       }
-      .theme-toggle:hover { background: rgba(255,255,255,0.25); }
+      .theme-toggle:hover {
+        background: rgba(255, 255, 255, 0.25);
+      }
 
       .contact-info {
         margin-top: 1.5rem;
@@ -123,13 +145,15 @@
         align-items: center;
         gap: 0.4rem;
         padding: 0.4rem 0.9rem;
-        background: rgba(255,255,255,0.12);
-        border: 1px solid rgba(255,255,255,0.15);
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.15);
         border-radius: 6px;
         font-size: 0.88rem;
         transition: background 0.3s;
       }
-      .contact-info a:hover { background: rgba(255,255,255,0.22); }
+      .contact-info a:hover {
+        background: rgba(255, 255, 255, 0.22);
+      }
 
       /* ── Navigation ── */
       nav {
@@ -151,13 +175,16 @@
         border-radius: 6px;
         transition: all 0.25s;
       }
-      nav a:hover, nav a.active {
+      nav a:hover,
+      nav a.active {
         color: var(--accent);
         background: var(--accent-light);
       }
 
       /* ── Section Headers ── */
-      section { margin-bottom: 2.5rem; }
+      section {
+        margin-bottom: 2.5rem;
+      }
       section h2 {
         font-size: 1.35rem;
         font-weight: 700;
@@ -169,7 +196,10 @@
         align-items: center;
         gap: 0.6rem;
       }
-      section h2 i { color: var(--accent); font-size: 1.1rem; }
+      section h2 i {
+        color: var(--accent);
+        font-size: 1.1rem;
+      }
 
       /* ── Cards ── */
       .card {
@@ -179,7 +209,9 @@
         border: 1px solid var(--border);
         padding: 1.5rem;
         margin-bottom: 1.25rem;
-        transition: transform 0.25s, box-shadow 0.25s;
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s;
       }
       .card:hover {
         transform: translateY(-3px);
@@ -187,7 +219,10 @@
       }
 
       /* ── About ── */
-      #about .card p { font-size: 0.97rem; color: var(--text); }
+      #about .card p {
+        font-size: 0.97rem;
+        color: var(--text);
+      }
 
       /* ── Education ── */
       .edu-card {
@@ -196,16 +231,26 @@
         gap: 1.25rem;
       }
       .edu-icon {
-        width: 50px; height: 50px;
+        width: 50px;
+        height: 50px;
         background: var(--accent-light);
         border-radius: 12px;
-        display: flex; align-items: center; justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         flex-shrink: 0;
         color: var(--accent);
         font-size: 1.3rem;
       }
-      .edu-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.2rem; }
-      .edu-card .degree { color: var(--text-muted); font-size: 0.9rem; }
+      .edu-card h3 {
+        font-size: 1.05rem;
+        font-weight: 700;
+        margin-bottom: 0.2rem;
+      }
+      .edu-card .degree {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
       .gpa-badge {
         display: inline-block;
         background: var(--accent);
@@ -229,11 +274,16 @@
       }
 
       /* ── Experience / Timeline ── */
-      .timeline { position: relative; padding-left: 2rem; }
+      .timeline {
+        position: relative;
+        padding-left: 2rem;
+      }
       .timeline::before {
         content: "";
         position: absolute;
-        left: 10px; top: 0; bottom: 0;
+        left: 10px;
+        top: 0;
+        bottom: 0;
         width: 2px;
         background: linear-gradient(to bottom, var(--accent), var(--border));
         border-radius: 2px;
@@ -245,8 +295,10 @@
       .timeline-item::before {
         content: "";
         position: absolute;
-        left: -1.65rem; top: 1.1rem;
-        width: 12px; height: 12px;
+        left: -1.65rem;
+        top: 1.1rem;
+        width: 12px;
+        height: 12px;
         border-radius: 50%;
         background: var(--accent);
         border: 2px solid var(--card-bg);
@@ -258,7 +310,9 @@
         box-shadow: 0 2px 10px var(--shadow);
         border: 1px solid var(--border);
         padding: 1.25rem 1.5rem;
-        transition: transform 0.25s, box-shadow 0.25s;
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s;
       }
       .exp-card:hover {
         transform: translateY(-3px);
@@ -272,8 +326,15 @@
         margin-bottom: 0.6rem;
         flex-wrap: wrap;
       }
-      .exp-title { font-size: 1rem; font-weight: 700; }
-      .exp-org { color: var(--accent); font-weight: 600; font-size: 0.9rem; }
+      .exp-title {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+      .exp-org {
+        color: var(--accent);
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
       .exp-meta {
         display: flex;
         flex-direction: column;
@@ -289,7 +350,11 @@
         font-size: 0.78rem;
         color: var(--text-muted);
       }
-      .exp-card ul { font-size: 0.9rem; color: var(--text); margin-top: 0.5rem; }
+      .exp-card ul {
+        font-size: 0.9rem;
+        color: var(--text);
+        margin-top: 0.5rem;
+      }
 
       /* ── Skills ── */
       .skills-grid {
@@ -313,7 +378,11 @@
         align-items: center;
         gap: 0.5rem;
       }
-      .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+      }
       .tag {
         background: var(--accent-light);
         color: var(--accent);
@@ -322,7 +391,9 @@
         padding: 0.25rem 0.6rem;
         border-radius: 4px;
       }
-      [data-theme="dark"] .tag { color: #93c5fd; }
+      [data-theme="dark"] .tag {
+        color: #93c5fd;
+      }
 
       /* ── Certifications ── */
       .cert-item {
@@ -335,13 +406,17 @@
         display: flex;
         gap: 1.5rem;
         align-items: center;
-        transition: transform 0.25s, box-shadow 0.25s;
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s;
       }
       .cert-item:hover {
         transform: translateY(-3px);
         box-shadow: 0 6px 20px var(--shadow);
       }
-      .cert-content { flex: 1; }
+      .cert-content {
+        flex: 1;
+      }
       .cert-content h4 {
         font-size: 1rem;
         font-weight: 700;
@@ -350,8 +425,13 @@
         align-items: center;
         gap: 0.5rem;
       }
-      .cert-content h4 i { color: var(--accent); }
-      .cert-content p { font-size: 0.88rem; color: var(--text-muted); }
+      .cert-content h4 i {
+        color: var(--accent);
+      }
+      .cert-content p {
+        font-size: 0.88rem;
+        color: var(--text-muted);
+      }
       .cert-year {
         display: inline-block;
         background: var(--accent-light);
@@ -362,14 +442,19 @@
         border-radius: 4px;
         margin-top: 0.4rem;
       }
-      .cert-image-container { flex-shrink: 0; }
+      .cert-image-container {
+        flex-shrink: 0;
+      }
       .cert-image {
-        width: 180px; height: 120px;
+        width: 180px;
+        height: 120px;
         object-fit: cover;
         border-radius: 8px;
         box-shadow: 0 4px 12px var(--shadow);
         cursor: pointer;
-        transition: transform 0.3s, box-shadow 0.3s;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
         border: 2px solid transparent;
       }
       .cert-image:hover {
@@ -378,7 +463,8 @@
         box-shadow: 0 8px 24px var(--shadow);
       }
       .cert-placeholder {
-        width: 180px; height: 120px;
+        width: 180px;
+        height: 120px;
         border-radius: 8px;
         background: var(--accent-light);
         border: 2px dashed var(--accent);
@@ -390,7 +476,11 @@
         cursor: default;
         flex-shrink: 0;
       }
-      .cert-placeholder i { color: var(--accent); font-size: 1.6rem; opacity: 0.6; }
+      .cert-placeholder i {
+        color: var(--accent);
+        font-size: 1.6rem;
+        opacity: 0.6;
+      }
       .cert-placeholder span {
         font-size: 0.72rem;
         color: var(--accent);
@@ -411,16 +501,30 @@
         display: flex;
         gap: 1.75rem;
         align-items: flex-start;
-        transition: transform 0.25s, box-shadow 0.25s;
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s;
       }
       .project:hover {
         transform: translateY(-3px);
         box-shadow: 0 6px 20px var(--shadow);
       }
-      .project-content { flex: 1; }
-      .project-content h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.3rem; }
-      .project-content em { color: var(--text-muted); font-size: 0.88rem; }
-      .project-content ul { font-size: 0.9rem; margin-top: 0.6rem; }
+      .project-content {
+        flex: 1;
+      }
+      .project-content h3 {
+        font-size: 1.05rem;
+        font-weight: 700;
+        margin-bottom: 0.3rem;
+      }
+      .project-content em {
+        color: var(--text-muted);
+        font-size: 0.88rem;
+      }
+      .project-content ul {
+        font-size: 0.9rem;
+        margin-top: 0.6rem;
+      }
       .project-badge {
         display: inline-block;
         font-size: 0.72rem;
@@ -430,20 +534,43 @@
         margin-bottom: 0.5rem;
         margin-right: 0.3rem;
       }
-      .badge-blue { background: #dbeafe; color: #1d4ed8; }
-      .badge-green { background: #dcfce7; color: #16a34a; }
-      .badge-purple { background: #ede9fe; color: #7c3aed; }
-      [data-theme="dark"] .badge-blue { background: #1e3a5f; color: #93c5fd; }
-      [data-theme="dark"] .badge-green { background: #14532d; color: #86efac; }
-      [data-theme="dark"] .badge-purple { background: #2e1065; color: #c4b5fd; }
-      .project-image-container { flex-shrink: 0; }
+      .badge-blue {
+        background: #dbeafe;
+        color: #1d4ed8;
+      }
+      .badge-green {
+        background: #dcfce7;
+        color: #16a34a;
+      }
+      .badge-purple {
+        background: #ede9fe;
+        color: #7c3aed;
+      }
+      [data-theme="dark"] .badge-blue {
+        background: #1e3a5f;
+        color: #93c5fd;
+      }
+      [data-theme="dark"] .badge-green {
+        background: #14532d;
+        color: #86efac;
+      }
+      [data-theme="dark"] .badge-purple {
+        background: #2e1065;
+        color: #c4b5fd;
+      }
+      .project-image-container {
+        flex-shrink: 0;
+      }
       .project-image {
-        width: 200px; height: 145px;
+        width: 200px;
+        height: 145px;
         object-fit: cover;
         border-radius: 10px;
         box-shadow: 0 4px 15px var(--shadow);
         cursor: pointer;
-        transition: transform 0.3s, border-color 0.3s;
+        transition:
+          transform 0.3s,
+          border-color 0.3s;
         border: 2px solid transparent;
       }
       .project-image:hover {
@@ -451,7 +578,8 @@
         border-color: var(--accent);
       }
       .project-placeholder {
-        width: 200px; height: 145px;
+        width: 200px;
+        height: 145px;
         border-radius: 10px;
         background: var(--accent-light);
         border: 2px dashed var(--accent);
@@ -462,19 +590,31 @@
         gap: 0.5rem;
         flex-shrink: 0;
       }
-      .project-placeholder i { color: var(--accent); font-size: 2rem; opacity: 0.5; }
-      .project-placeholder span { font-size: 0.72rem; color: var(--accent); opacity: 0.8; font-weight: 600; }
+      .project-placeholder i {
+        color: var(--accent);
+        font-size: 2rem;
+        opacity: 0.5;
+      }
+      .project-placeholder span {
+        font-size: 0.72rem;
+        color: var(--accent);
+        opacity: 0.8;
+        font-weight: 600;
+      }
 
       /* ── CV Section ── */
       .cv-image {
-        width: 200px; height: 280px;
+        width: 200px;
+        height: 280px;
         object-fit: contain;
         background: white;
         padding: 8px;
         border-radius: 10px;
         box-shadow: 0 4px 15px var(--shadow);
         cursor: pointer;
-        transition: transform 0.3s, border-color 0.3s;
+        transition:
+          transform 0.3s,
+          border-color 0.3s;
         border: 2px solid transparent;
         flex-shrink: 0;
       }
@@ -509,7 +649,9 @@
         color: var(--accent);
         transform: translateY(-2px);
       }
-      #contact .contact-info a i { color: var(--accent); }
+      #contact .contact-info a i {
+        color: var(--accent);
+      }
       .contact-location {
         display: flex;
         align-items: center;
@@ -523,21 +665,27 @@
         color: var(--text);
         box-shadow: 0 2px 8px var(--shadow);
       }
-      .contact-location i { color: var(--accent); }
+      .contact-location i {
+        color: var(--accent);
+      }
 
       /* ── Modal ── */
       .modal {
         display: none;
         position: fixed;
         z-index: 1000;
-        left: 0; top: 0;
-        width: 100%; height: 100%;
-        background-color: rgba(0,0,0,0.92);
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.92);
         animation: fadeIn 0.3s;
         align-items: center;
         justify-content: center;
       }
-      .modal.open { display: flex; }
+      .modal.open {
+        display: flex;
+      }
       .modal-content {
         max-width: 85%;
         max-height: 85vh;
@@ -547,16 +695,33 @@
       }
       .close {
         position: absolute;
-        top: 18px; right: 30px;
+        top: 18px;
+        right: 30px;
         color: #f1f1f1;
         font-size: 36px;
         cursor: pointer;
         transition: color 0.3s;
         line-height: 1;
       }
-      .close:hover { color: var(--accent); }
-      @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-      @keyframes zoomIn { from { transform: scale(0.7); } to { transform: scale(1); } }
+      .close:hover {
+        color: var(--accent);
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes zoomIn {
+        from {
+          transform: scale(0.7);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
 
       /* ── Footer ── */
       footer {
@@ -570,41 +735,64 @@
 
       /* ── Responsive ── */
       @media (max-width: 768px) {
-        header { padding: 2.5rem 1.5rem 2rem; }
-        header h1 { font-size: 1.8rem; }
-        nav { gap: 0.2rem; }
-        .project, .cert-item {
+        header {
+          padding: 2.5rem 1.5rem 2rem;
+        }
+        header h1 {
+          font-size: 1.8rem;
+        }
+        nav {
+          gap: 0.2rem;
+        }
+        .project,
+        .cert-item {
           flex-direction: column;
         }
-        .project-image, .cert-image, .cert-placeholder, .project-placeholder {
+        .project-image,
+        .cert-image,
+        .cert-placeholder,
+        .project-placeholder {
           width: 100%;
           max-width: 320px;
           height: 180px;
         }
-        .cv-image { width: 100%; max-width: 280px; height: 350px; }
-        .exp-meta { align-items: flex-start; }
-        .modal-content { max-width: 95%; }
+        .cv-image {
+          width: 100%;
+          max-width: 280px;
+          height: 350px;
+        }
+        .exp-meta {
+          align-items: flex-start;
+        }
+        .modal-content {
+          max-width: 95%;
+        }
       }
     </style>
   </head>
   <body>
     <div class="container">
-
       <!-- ── Header ── -->
       <header>
         <button class="theme-toggle" onclick="toggleTheme()">
           <i class="fas fa-moon"></i>
-          <i class="fas fa-sun" style="display:none"></i>
+          <i class="fas fa-sun" style="display: none"></i>
         </button>
         <h1>Khalid Mushif Ali Asiri</h1>
-        <p class="header-title">Artificial Intelligence • Digital Transformation • Data Analytics</p>
+        <p class="header-title">
+          Artificial Intelligence • Digital Transformation • Data Analytics
+        </p>
         <p class="header-summary">
-          Pragmatic AI &amp; Data Solutions Specialist combining expertise in IT infrastructure,
-          full-stack integration, and intelligent systems. Specialized in architecting robust
-          data pipelines and deploying predictive models to drive strategic decision-making.
+          Pragmatic AI &amp; Data Solutions Specialist combining expertise in IT
+          infrastructure, full-stack integration, and intelligent systems.
+          Specialized in architecting robust data pipelines and deploying
+          predictive models to drive strategic decision-making.
         </p>
         <div class="contact-info">
-          <a href="https://www.linkedin.com/in/khalid-asiri-7a1599334/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/khalid-asiri-7a1599334/"
+            target="_blank"
+          >
             <i class="fab fa-linkedin"></i> LinkedIn
           </a>
           <a href="https://github.com/khalidasi1" target="_blank">
@@ -636,11 +824,13 @@
         <h2><i class="fas fa-user"></i> About Me</h2>
         <div class="card">
           <p>
-            Pragmatic AI &amp; Data Solutions Specialist combining expertise in IT infrastructure,
-            full-stack integration, and intelligent systems. Specialized in architecting robust
-            data pipelines and deploying predictive models to drive strategic decision-making.
-            Integrates AI architecture with internal auditing and data governance to deliver
-            automated, secure solutions compliant with strict national regulatory frameworks.
+            Pragmatic AI &amp; Data Solutions Specialist combining expertise in
+            IT infrastructure, full-stack integration, and intelligent systems.
+            Specialized in architecting robust data pipelines and deploying
+            predictive models to drive strategic decision-making. Integrates AI
+            architecture with internal auditing and data governance to deliver
+            automated, secure solutions compliant with strict national
+            regulatory frameworks.
           </p>
         </div>
       </section>
@@ -653,7 +843,9 @@
             <div class="edu-icon"><i class="fas fa-university"></i></div>
             <div>
               <h3>King Khalid University</h3>
-              <p class="degree">Bachelor of Science in Computer Science – AI Track</p>
+              <p class="degree">
+                Bachelor of Science in Computer Science – AI Track
+              </p>
               <p class="degree">Graduated: August 2025</p>
               <div>
                 <span class="gpa-badge">GPA: 4.78 / 5</span>
@@ -669,24 +861,41 @@
       <section id="experience">
         <h2><i class="fas fa-briefcase"></i> Experience</h2>
         <div class="timeline">
-
           <!-- SFDA -->
           <div class="timeline-item">
             <div class="exp-card">
               <div class="exp-header">
                 <div>
                   <div class="exp-title">Data Analyst</div>
-                  <div class="exp-org">Saudi Food and Drug Authority (SFDA)</div>
+                  <div class="exp-org">
+                    Saudi Food and Drug Authority (SFDA)
+                  </div>
                 </div>
                 <div class="exp-meta">
-                  <span class="exp-date"><i class="fas fa-calendar-alt"></i> Dec 2025 – Jun 2026</span>
-                  <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Riyadh</span>
+                  <span class="exp-date"
+                    ><i class="fas fa-calendar-alt"></i> Dec 2025 – Jun
+                    2026</span
+                  >
+                  <span class="exp-location"
+                    ><i class="fas fa-map-marker-alt"></i> Riyadh</span
+                  >
                 </div>
               </div>
               <ul>
-                <li>Developed an internal decision-support platform for economic and regulatory impact analysis, reducing study preparation time by 65%.</li>
-                <li>Automated data processing and economic analysis workflows in research operations, improving analytical accuracy by 34%.</li>
-                <li>Supported AI adoption and digital transformation across the department by delivering internal workshops on data-driven analysis.</li>
+                <li>
+                  Developed an internal decision-support platform for economic
+                  and regulatory impact analysis, reducing study preparation
+                  time by 65%.
+                </li>
+                <li>
+                  Automated data processing and economic analysis workflows in
+                  research operations, improving analytical accuracy by 34%.
+                </li>
+                <li>
+                  Supported AI adoption and digital transformation across the
+                  department by delivering internal workshops on data-driven
+                  analysis.
+                </li>
               </ul>
             </div>
           </div>
@@ -700,12 +909,21 @@
                   <div class="exp-org">FlxCode Company</div>
                 </div>
                 <div class="exp-meta">
-                  <span class="exp-date"><i class="fas fa-calendar-alt"></i> Aug 2025 – Nov 2025</span>
-                  <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Abha</span>
+                  <span class="exp-date"
+                    ><i class="fas fa-calendar-alt"></i> Aug 2025 – Nov
+                    2025</span
+                  >
+                  <span class="exp-location"
+                    ><i class="fas fa-map-marker-alt"></i> Abha</span
+                  >
                 </div>
               </div>
               <ul>
-                <li>Developed and integrated full-stack features using React.js and REST APIs for the Aseer Development Authority platform, streamlining digital service delivery.</li>
+                <li>
+                  Developed and integrated full-stack features using React.js
+                  and REST APIs for the Aseer Development Authority platform,
+                  streamlining digital service delivery.
+                </li>
               </ul>
             </div>
           </div>
@@ -719,16 +937,25 @@
                   <div class="exp-org">Saudi Electricity Company</div>
                 </div>
                 <div class="exp-meta">
-                  <span class="exp-date"><i class="fas fa-calendar-alt"></i> Jun 2025 – Aug 2025</span>
-                  <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Abha</span>
+                  <span class="exp-date"
+                    ><i class="fas fa-calendar-alt"></i> Jun 2025 – Aug
+                    2025</span
+                  >
+                  <span class="exp-location"
+                    ><i class="fas fa-map-marker-alt"></i> Abha</span
+                  >
                 </div>
               </div>
               <ul>
-                <li>Facilitated digital transformation and IT operations by upgrading internal systems with React.js and applying ITIL standards to ensure structural reliability and service excellence.</li>
+                <li>
+                  Facilitated digital transformation and IT operations by
+                  upgrading internal systems with React.js and applying ITIL
+                  standards to ensure structural reliability and service
+                  excellence.
+                </li>
               </ul>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -763,7 +990,9 @@
             </div>
           </div>
           <div class="skill-card">
-            <h3><i class="fas fa-chart-line"></i> Strategic &amp; Operational</h3>
+            <h3>
+              <i class="fas fa-chart-line"></i> Strategic &amp; Operational
+            </h3>
             <div class="tags">
               <span class="tag">Strategic Analysis</span>
               <span class="tag">Decision Support</span>
@@ -790,7 +1019,10 @@
         <!-- KAUST -->
         <div class="cert-item">
           <div class="cert-content">
-            <h4><i class="fas fa-certificate"></i> Advanced Artificial Intelligence &amp; Machine Learning</h4>
+            <h4>
+              <i class="fas fa-certificate"></i> Advanced Artificial
+              Intelligence &amp; Machine Learning
+            </h4>
             <p>King Abdullah University of Science and Technology (KAUST)</p>
             <span class="cert-year">2025</span>
           </div>
@@ -875,7 +1107,9 @@
         <!-- HCIA-Cloud -->
         <div class="cert-item">
           <div class="cert-content">
-            <h4><i class="fas fa-certificate"></i> HCIA-Cloud Computing V5.0</h4>
+            <h4>
+              <i class="fas fa-certificate"></i> HCIA-Cloud Computing V5.0
+            </h4>
             <p>Huawei Technologies</p>
             <span class="cert-year">2024</span>
           </div>
@@ -909,7 +1143,9 @@
         <!-- IBM Cybersecurity -->
         <div class="cert-item">
           <div class="cert-content">
-            <h4><i class="fas fa-certificate"></i> Cybersecurity Fundamentals</h4>
+            <h4>
+              <i class="fas fa-certificate"></i> Cybersecurity Fundamentals
+            </h4>
             <p>IBM SkillsBuild</p>
             <span class="cert-year">2024</span>
           </div>
@@ -926,7 +1162,10 @@
         <!-- Internal Audit -->
         <div class="cert-item">
           <div class="cert-content">
-            <h4><i class="fas fa-certificate"></i> Internal Audit Practitioner (IAP)</h4>
+            <h4>
+              <i class="fas fa-certificate"></i> Internal Audit Practitioner
+              (IAP)
+            </h4>
             <p>Morgan International</p>
             <span class="cert-year">2024</span>
           </div>
@@ -939,7 +1178,6 @@
             />
           </div>
         </div>
-
       </section>
 
       <!-- ── Projects ── -->
@@ -956,8 +1194,15 @@
             <h3>AI-Powered Urban Service Distribution System</h3>
             <p><em>Python · TensorFlow · GIS Tools — 2025</em></p>
             <ul>
-              <li>Developed a predictive AI solution to optimize resource distribution across urban areas.</li>
-              <li>Research study demonstrated a <strong>23% reduction in financial waste</strong> and alignment with Vision 2030 goals.</li>
+              <li>
+                Developed a predictive AI solution to optimize resource
+                distribution across urban areas.
+              </li>
+              <li>
+                Research study demonstrated a
+                <strong>23% reduction in financial waste</strong> and alignment
+                with Vision 2030 goals.
+              </li>
             </ul>
           </div>
           <div class="project-image-container">
@@ -979,8 +1224,15 @@
             <h3>AI-Based Factory Worker Safety Detection</h3>
             <p><em>Python · CNN · Computer Vision — 2024</em></p>
             <ul>
-              <li>Architected a real-time CNN-based system achieving <strong>95%+ accuracy</strong> in PPE (Personal Protective Equipment) detection.</li>
-              <li>Automated industrial safety compliance and access control to reduce workplace hazards.</li>
+              <li>
+                Architected a real-time CNN-based system achieving
+                <strong>95%+ accuracy</strong> in PPE (Personal Protective
+                Equipment) detection.
+              </li>
+              <li>
+                Automated industrial safety compliance and access control to
+                reduce workplace hazards.
+              </li>
             </ul>
           </div>
           <div class="project-image-container">
@@ -1002,7 +1254,10 @@
             <h3>Smart City Cybersecurity Framework</h3>
             <p><em>Cloud Computing · AI Integration</em></p>
             <ul>
-              <li>Designed a cloud-based threat detection system using AI-driven anomaly recognition.</li>
+              <li>
+                Designed a cloud-based threat detection system using AI-driven
+                anomaly recognition.
+              </li>
             </ul>
           </div>
           <div class="project-image-container">
@@ -1019,19 +1274,46 @@
         <div class="project">
           <div class="project-content">
             <div>
-              <span class="project-badge badge-green">Professional Project</span>
-              <span class="project-badge" style="background:#7f1d1d;color:#fecaca;margin-left:0.4rem;">
+              <span class="project-badge badge-green"
+                >Professional Project</span
+              >
+              <span
+                class="project-badge"
+                style="background: #7f1d1d; color: #fecaca; margin-left: 0.4rem"
+              >
                 <i class="fas fa-lock"></i> سري · Classified
               </span>
             </div>
-            <h3>Automation &amp; Digital Transformation — SFDA Research &amp; Studies</h3>
+            <h3>
+              Automation &amp; Digital Transformation — SFDA Research &amp;
+              Studies
+            </h3>
             <p><em>RPA · Python · Power Automate · Power BI · AI — SFDA</em></p>
             <ul>
-              <li>Engineered an end-to-end automation framework for the Research &amp; Studies Department at the <strong>Saudi Food and Drug Authority (SFDA)</strong>, eliminating manual bottlenecks in regulatory research workflows.</li>
-              <li>Deployed AI-driven document processing and NLP pipelines, reducing report generation time by <strong>70%</strong> and achieving <strong>99%+ data accuracy</strong>.</li>
-              <li>Built interactive Power BI dashboards for real-time research KPI monitoring and compliance tracking.</li>
+              <li>
+                Engineered an end-to-end automation framework for the Research
+                &amp; Studies Department at the
+                <strong>Saudi Food and Drug Authority (SFDA)</strong>,
+                eliminating manual bottlenecks in regulatory research workflows.
+              </li>
+              <li>
+                Deployed AI-driven document processing and NLP pipelines,
+                reducing report generation time by <strong>70%</strong> and
+                achieving <strong>99%+ data accuracy</strong>.
+              </li>
+              <li>
+                Built interactive Power BI dashboards for real-time research KPI
+                monitoring and compliance tracking.
+              </li>
             </ul>
-            <p style="margin-top:0.6rem;font-size:0.82rem;color:#ef4444;font-weight:600;">
+            <p
+              style="
+                margin-top: 0.6rem;
+                font-size: 0.82rem;
+                color: #ef4444;
+                font-weight: 600;
+              "
+            >
               <i class="fas fa-lock"></i> التفاصيل الدقيقة للمشروع تعتبر سرية.
             </p>
           </div>
@@ -1049,20 +1331,58 @@
         <div class="project">
           <div class="project-content">
             <div>
-              <span class="project-badge badge-green">Professional Project</span>
-              <span class="project-badge" style="background:#7f1d1d;color:#fecaca;margin-left:0.4rem;">
+              <span class="project-badge badge-green"
+                >Professional Project</span
+              >
+              <span
+                class="project-badge"
+                style="background: #7f1d1d; color: #fecaca; margin-left: 0.4rem"
+              >
                 <i class="fas fa-lock"></i> سري · Classified
               </span>
             </div>
             <h3>Automated Laboratory Data Ingestion Platform — SFDA</h3>
-            <p><em>Workflow Automation · Scheduler &amp; Worker Services · Redis · PostgreSQL — SFDA</em></p>
+            <p>
+              <em
+                >Workflow Automation · Scheduler &amp; Worker Services · Redis ·
+                PostgreSQL — SFDA</em
+              >
+            </p>
             <ul>
-              <li>Built a dedicated in-house automation platform for the Saudi Food and Drug Authority (SFDA) that receives laboratory result emails containing large volumes of product data, then automatically opens, reads, parses, validates, and inserts the data into the main database.</li>
-              <li>Replaced a fully manual process, in which staff extracted, analyzed, and entered product records by hand over several days, with near real-time automated ingestion that requires no human data entry.</li>
-              <li>Designed a service-based architecture: a Scheduler triggers ingestion cycles, a Worker processes incoming emails and attachments through a Redis queue, and a Workflow service applies business rules and writes validated records to PostgreSQL, with persistent volumes for both data stores.</li>
-              <li>Developed and hosted the platform internally rather than using third-party automation tools, keeping regulated product data within controlled infrastructure and preventing data leakage.</li>
+              <li>
+                Built a dedicated in-house automation platform for the Saudi
+                Food and Drug Authority (SFDA) that receives laboratory result
+                emails containing large volumes of product data, then
+                automatically opens, reads, parses, validates, and inserts the
+                data into the main database.
+              </li>
+              <li>
+                Replaced a fully manual process, in which staff extracted,
+                analyzed, and entered product records by hand over several days,
+                with near real-time automated ingestion that requires no human
+                data entry.
+              </li>
+              <li>
+                Designed a service-based architecture: a Scheduler triggers
+                ingestion cycles, a Worker processes incoming emails and
+                attachments through a Redis queue, and a Workflow service
+                applies business rules and writes validated records to
+                PostgreSQL, with persistent volumes for both data stores.
+              </li>
+              <li>
+                Developed and hosted the platform internally rather than using
+                third-party automation tools, keeping regulated product data
+                within controlled infrastructure and preventing data leakage.
+              </li>
             </ul>
-            <p style="margin-top:0.6rem;font-size:0.82rem;color:#ef4444;font-weight:600;">
+            <p
+              style="
+                margin-top: 0.6rem;
+                font-size: 0.82rem;
+                color: #ef4444;
+                font-weight: 600;
+              "
+            >
               <i class="fas fa-lock"></i> التفاصيل الدقيقة للمشروع تعتبر سرية.
             </p>
           </div>
@@ -1075,7 +1395,6 @@
             />
           </div>
         </div>
-
       </section>
 
       <!-- ── CV ── -->
@@ -1086,13 +1405,26 @@
             <h3>Professional CV</h3>
             <p><em>Complete academic and professional background</em></p>
             <ul>
-              <li>Comprehensive overview of education, certifications, and technical skills</li>
-              <li>Full work experience at SFDA, FlxCode, and Saudi Electricity Company</li>
+              <li>
+                Comprehensive overview of education, certifications, and
+                technical skills
+              </li>
+              <li>
+                Full work experience at SFDA, FlxCode, and Saudi Electricity
+                Company
+              </li>
               <li>Detailed project descriptions and achievements</li>
               <li>GPA: 4.78/5 – King Khalid University</li>
             </ul>
-            <p style="margin-top:0.75rem; font-size:0.85rem; color:var(--text-muted);">
-              <i class="fas fa-search-plus"></i> Click the CV image to view full size
+            <p
+              style="
+                margin-top: 0.75rem;
+                font-size: 0.85rem;
+                color: var(--text-muted);
+              "
+            >
+              <i class="fas fa-search-plus"></i> Click the CV image to view full
+              size
             </p>
           </div>
           <div class="project-image-container">
@@ -1116,7 +1448,10 @@
           <a href="tel:+966531906383">
             <i class="fas fa-phone"></i> +966 531906383
           </a>
-          <a href="https://www.linkedin.com/in/khalid-asiri-7a1599334/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/khalid-asiri-7a1599334/"
+            target="_blank"
+          >
             <i class="fab fa-linkedin"></i> LinkedIn
           </a>
           <a href="https://github.com/khalidasi1" target="_blank">
@@ -1129,7 +1464,10 @@
       </section>
 
       <footer>
-        <p>© 2026 Khalid Mushif Ali Asiri · Artificial Intelligence • Digital Transformation • Data Analytics</p>
+        <p>
+          © 2026 Khalid Mushif Ali Asiri · Artificial Intelligence • Digital
+          Transformation • Data Analytics
+        </p>
       </footer>
     </div>
 
@@ -1143,20 +1481,20 @@
       function toggleTheme() {
         const body = document.body;
         const moon = document.querySelector(".fa-moon");
-        const sun  = document.querySelector(".fa-sun");
+        const sun = document.querySelector(".fa-sun");
         if (body.getAttribute("data-theme") === "dark") {
           body.removeAttribute("data-theme");
           moon.style.display = "inline-block";
-          sun.style.display  = "none";
+          sun.style.display = "none";
         } else {
           body.setAttribute("data-theme", "dark");
           moon.style.display = "none";
-          sun.style.display  = "inline-block";
+          sun.style.display = "inline-block";
         }
       }
 
       function openModal(img) {
-        const modal    = document.getElementById("imageModal");
+        const modal = document.getElementById("imageModal");
         const modalImg = document.getElementById("modalImage");
         modal.classList.add("open");
         modalImg.src = img.src;
@@ -1167,21 +1505,22 @@
         document.getElementById("imageModal").classList.remove("open");
       }
 
-      document.addEventListener("keydown", e => {
+      document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") closeModal();
       });
 
       if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
         document.body.setAttribute("data-theme", "dark");
         document.querySelector(".fa-moon").style.display = "none";
-        document.querySelector(".fa-sun").style.display  = "inline-block";
+        document.querySelector(".fa-sun").style.display = "inline-block";
       }
 
-      document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function(e) {
+      document.querySelectorAll('nav a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
           e.preventDefault();
           const target = document.querySelector(this.getAttribute("href"));
-          if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+          if (target)
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
         });
       });
     </script>
